@@ -1,0 +1,41 @@
+HTML 
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Profit Calculator</title>
+</head>
+<body>
+
+  <h1>Profit Calculator</h1>
+
+  <label>Product Cost:</label><br>
+  <input type="number" id="cost"><br><br>
+
+  <label>Selling Price:</label><br>
+  <input type="number" id="price"><br><br>
+
+  <label>Extra Costs:</label><br>
+  <input type="number" id="extra"><br><br>
+
+  <button onclick="calculate()">Calculate</button>
+
+  <h2 id="result"></h2>
+
+  <script>
+    function calculate() {
+      let cost = Number(document.getElementById("cost").value);
+      let price = Number(document.getElementById("price").value);
+      let extra = Number(document.getElementById("extra").value);
+
+      let profit = price - (cost + extra);
+      let margin = (profit / price) * 100;
+
+      document.getElementById("result").innerText =
+        "Profit: $" + profit + " | Margin: " + margin.toFixed(2) + "%";
+    }
+  </script>
+
+</body>
+</html>
