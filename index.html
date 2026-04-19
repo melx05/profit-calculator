@@ -1,23 +1,41 @@
 HTML 
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8">
   <title>Profit Calculator</title>
+
+  <style>
+    body {
+      font-family: Arial;
+      background: #111;
+      color: white;
+      text-align: center;
+      padding: 50px;
+    }
+
+    input {
+      padding: 10px;
+      margin: 5px;
+      width: 200px;
+    }
+
+    button {
+      padding: 10px 20px;
+      background: #00ffcc;
+      border: none;
+      cursor: pointer;
+    }
+  </style>
 </head>
+
 <body>
 
-  <h1>Profit Calculator</h1>
+  <h1>💰 Profit Calculator</h1>
 
-  <label>Product Cost:</label><br>
-  <input type="number" id="cost"><br><br>
-
-  <label>Selling Price:</label><br>
-  <input type="number" id="price"><br><br>
-
-  <label>Extra Costs:</label><br>
-  <input type="number" id="extra"><br><br>
+  <input type="number" id="cost" placeholder="Product Cost"><br>
+  <input type="number" id="price" placeholder="Selling Price"><br>
+  <input type="number" id="extra" placeholder="Extra Costs"><br><br>
 
   <button onclick="calculate()">Calculate</button>
 
